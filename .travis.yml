@@ -2,7 +2,7 @@ language: java
 sudo: false
 addons:
           apt:
-                    sources: r-packages-trusty
+                    sources: r-packages-precise
                     packages: 
                               - gcc-4.9-arm-linux-gnueabi
                               - texlive
