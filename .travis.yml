@@ -4,13 +4,13 @@ addons:
           apt:
                     sources: r-packages-trusty
                     packages: 
-                              - gcc-4.8-arm-linux-gnueabihf 
+                              - gcc-4.9-arm-linux-gnueabi
                               - texlive
                               - src
 
 
 install: 
-          - which arm-linux-gnueabihf-gcc-4.8 || true
+          - which arm-linux-gnueabi-gcc-4.9 || true
           - ls /bin
           - ls /usr/bin
           - mvn clean install -Dcompiler.exec=arm-linux-gnueabihf-gcc-4.8 -Dlinker.exec=arm-linux-gnueabihf-ld
