@@ -11,13 +11,14 @@ addons:
                         - gcc-4.8-arm-linux-gnueabihf 
 
 
+script: mvn clean install -Dcompiler.exec=arm-linux-gnueabihf-gcc-4.8 -Dlinker.exec=arm-linux-gnueabihf-ld
 jdk:
   - oraclejdk8
   - oraclejdk7
 
-notifications:
-  email:
-    - pipistik.bunciak@gmail.com
+#notifications:
+#  email:
+#    - pipistik.bunciak@gmail.com
 
 branches:
   only:
