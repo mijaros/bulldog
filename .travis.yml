@@ -11,7 +11,7 @@ addons:
                         - gcc-4.8-arm-linux-gnueabihf 
 
 
-script: mvn clean install -Dcompiler.exec=arm-linux-gnueabihf-gcc-4.8 -Dlinker.exec=arm-linux-gnueabihf-ld
+script: "mvn clean install -Dcompiler.exec=arm-linux-gnueabihf-gcc-4.8 -Dlinker.exec=arm-linux-gnueabihf-ld"
 jdk:
   - oraclejdk8
   - oraclejdk7
