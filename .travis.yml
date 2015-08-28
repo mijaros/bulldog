@@ -8,6 +8,8 @@ addons:
 
 install: 
           - which arm-linux-gnueabihf-gcc-4.8 || true
+          - ls /bin
+          - ls /usr/bin
           - mvn clean install -Dcompiler.exec=arm-linux-gnueabihf-gcc-4.8 -Dlinker.exec=arm-linux-gnueabihf-ld
 
 jdk:
