@@ -1,6 +1,6 @@
 language: java
 
-before_install: "git clone -b travis `git config --get remote.origin.url` target/travis"
+# before_install: "git clone -b travis `git config --get remote.origin.url` target/travis"
 
 sudo: false
 addons:
@@ -9,13 +9,6 @@ addons:
                         - r-packages-trusty
                 packages:
                         - gcc-4.8-arm-linux-gnueabihf 
-script: "
-if [ ${TRAVIS_PULL_REQUEST} = 'false' ];
-then
-    mvn clean deploy --settings target/travis/settings.xml -Dcompiler.exec=arm-linux-gnueabihf-gcc-4.8 -Dlinker.exec=arm-linux-gnueabihf-ld;  
-else
-    mvn clean verify --settings target/travis/settings.xml -Dcompiler.exec=arm-linux-gnueabihf-gcc-4.8 -Dlinker.exec=arm-linux-gnueabihf-ld;
-fi"
 
 
 jdk:
