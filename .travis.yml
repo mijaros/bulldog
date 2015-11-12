@@ -4,7 +4,7 @@ addons:
           apt:
                     sources: r-packages-trusty
                     packages: 
-                              - gcc-4.9-arm-linux-gnueabi
+                              - gcc-4.8-arm-linux-gnueabi
                               - texlive
                               - src
 
